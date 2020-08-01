@@ -1,12 +1,15 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
 	[HideInInspector] public Rigidbody2D rb;
 	[HideInInspector] public CircleCollider2D col;
+	[HideInInspector] public float timeSpeed = 0.8f;
 
-	[HideInInspector] public Vector3 pos { get { return transform.position; } }
+	[HideInInspector] public Vector2 pos { get { return transform.position; } }
+
+	[HideInInspector] public int health;
+	[HideInInspector] public int damage = 1;
 
 	void Awake ()
 	{
@@ -21,13 +24,13 @@ public class Ball : MonoBehaviour
 
 	public void ActivateRb ()
 	{
-		rb.isKinematic = false;
+		Time.timeScale = 1.0f;
 	}
 
 	public void DesactivateRb ()
 	{
-		rb.velocity = Vector3.zero;
-		rb.angularVelocity = 0f;
-		rb.isKinematic = true;
+		rb.velocity = Vector2.zero;
+		rb.angularVelocity = 0.2f;
+		Time.timeScale = timeSpeed;
 	}
 }

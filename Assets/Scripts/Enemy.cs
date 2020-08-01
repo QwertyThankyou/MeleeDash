@@ -1,18 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class Enemy : MonoBehaviour
+[Serializable]
+public class Enemy
 {
-    // Start is called before the first frame update
-    void Start()
+    public int health;
+    public int damage;
+    public int speed;
+
+    public void TakeDamage(int x)
     {
-        
+        health -= x;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // public void Spawn(Vector2 begin, Vector2 end)
+    // {
+    //     Random random = new Random();
+    //     float randX = Random.Range(begin.x, end.x);
+    //     float randY = Random.Range(begin.y, end.y);
+    //     
+    //     Vector2 enemyPos = new Vector3(randX, randY);
+    //
+    //     Instantiate(dummy, dummyPos, Quaternion.Euler(0, -90, 0));
+    // }
 }
