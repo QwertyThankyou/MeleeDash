@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -70,7 +69,7 @@ public class GameManager : MonoBehaviour
 		force = direction * distance * pushForce;
 
 		//just for debug
-		Debug.DrawLine (startPoint, endPoint);
+		//Debug.DrawLine (startPoint, endPoint);
 
 
 		trajectory.UpdateDots (ball.pos, force);
