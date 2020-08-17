@@ -40,7 +40,8 @@ public class Enemyshooting : MonoBehaviour
         if(timeBtwShots <= 0){
             Instantiate(projectile, transform.position, Quaternion.identity);
             timeBtwShots = startTimeBtwShots;
-        }else{
+        }
+        else{
             timeBtwShots -= Time.deltaTime;
         }
     }
