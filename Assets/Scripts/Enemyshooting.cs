@@ -7,13 +7,10 @@ public class Enemyshooting : MonoBehaviour
     public float speed;
     public float stoppingDistance;
     public float retreaDistance;
-
+    
     private float timeBtwShots;
     public float startTimeBtwShots;
-
-
-
-
+    
     public Transform player;
     public GameObject projectile;
 
@@ -27,11 +24,11 @@ public class Enemyshooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
+        if(Vector2.Distance(transform.position, player.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        }
-        else if (Vector2.Distance(transform.position, player.position) > stoppingDistance && Vector2.Distance(transform.position, player.position) > retreaDistance)
+        } 
+        else if(Vector2.Distance(transform.position, player.position) > stoppingDistance && Vector2.Distance(transform.position, player.position) > retreaDistance)
         {
             transform.position = this.transform.position;
         }
@@ -40,15 +37,12 @@ public class Enemyshooting : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
 
-        if (timeBtwShots <= 0)
-        {
+        if(timeBtwShots <= 0){
             Instantiate(projectile, transform.position, Quaternion.identity);
             timeBtwShots = startTimeBtwShots;
-        }
-        else
-        {
+        }else{
             timeBtwShots -= Time.deltaTime;
         }
     }
-
+    
 }
