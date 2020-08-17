@@ -9,9 +9,9 @@ public class EnemyController : MonoBehaviour
 {
     private int _health = 2;     // Здоровье врага
     private int _damage = 1;     // Урон
-    private float _speed = 1f;   // Скорость передвижения
+    private float _speed = 2f;   // Скорость передвижения
 
-    private float _viewRad = 7.5f;  // Радиус обнаружения
+    private float _viewRad = 40f;  // Радиус обнаружения
 
     private Transform _player;
     private Ball _ball;
