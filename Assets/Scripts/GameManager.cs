@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-	public UnityEvent enemyDestroy;
+	public UnityEvent enemyDestroy;  // Вызывается при смерти enemy
 	
 	Camera cam;
 
@@ -12,9 +13,12 @@ public class GameManager : MonoBehaviour
 	public Trajectory trajectory;
 	[SerializeField] float pushForce = 4f;
 
-	private List<GameObject> portals = new List<GameObject>();
-	private int currentRoom = 0;
-	public int countPortal = 1;
+	private List<GameObject> portals = new List<GameObject>(); // Лист с GameObject порталами
+	private int currentRoom = 0; // Номер комнаты, в которой находится игрок, по умолчанию спавнимся в первой (нулевой)
+	public int countPortal = 1;  // Количество порталов на сцене
+	
+	public List<int> enemyCountInRoom = new List<int>();  // Лист с колличеством врагов в каждой комнате
+	private int enemyKill = 0;  // Ситает убийства в текущей комнате
 
 	bool isDragging = false;
 
@@ -30,15 +34,7 @@ public class GameManager : MonoBehaviour
 		cam = Camera.main;
 		ball.DesactivateRb ();
 
-		for (int i = 1; i <= countPortal; i++)
-		{
-			portals.Add(GameObject.Find("Portal" + i));
-		}
-
-		foreach (var portal in portals)
-		{
-			portal.SetActive(false);	
-		}
+		PortalFill();
 	}
 
 	void Update ()
@@ -57,7 +53,30 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	public void PortalActive()
+	public void EnemyKill()  // Вызывается при уничтожении enemy
+	{
+		enemyKill++;
+		if (enemyCountInRoom[currentRoom] == enemyKill)
+		{
+			PortalActive();
+			enemyKill = 0;
+		}
+	}
+
+	private void PortalFill()  // Заполнение листа с порталами
+	{
+		for (int i = 1; i <= countPortal; i++)
+		{
+			portals.Add(GameObject.Find("Portal" + i));
+		}
+
+		foreach (var portal in portals)
+		{
+			portal.SetActive(false);	
+		}
+	}
+
+	private void PortalActive() // Активация портала в текущей комнате
 	{
 		portals[currentRoom].SetActive(true);
 		currentRoom++;
@@ -96,4 +115,9 @@ public class GameManager : MonoBehaviour
 		trajectory.Hide ();
 	}
 
+	private void OnDisable()
+	{
+		portals.Clear();
+		enemyCountInRoom.Clear();
+	}
 }

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
@@ -32,5 +34,10 @@ public class Ball : MonoBehaviour
 		rb.velocity = Vector2.zero;
 		rb.angularVelocity = 0.2f;
 		Time.timeScale = timeSpeed;
+	}
+
+	private void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.CompareTag("Trap")) SceneManager.LoadScene(0);
 	}
 }

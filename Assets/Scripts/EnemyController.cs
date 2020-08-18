@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
-    private GameManager GameMana;
+    private GameManager gameManager;
     
     private int _health = 2;     // Здоровье врага
     private int _damage = 1;     // Урон
@@ -27,8 +27,8 @@ public class EnemyController : MonoBehaviour
         _player = GameObject.FindWithTag("Player").transform;
         _ball = GameObject.FindWithTag("Player").GetComponent<Ball>();
 
-        GameMana = GameObject.Find("GameManager").GetComponent<GameManager>();
-        GameMana.enemyDestroy.AddListener(delegate {  });
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager.enemyDestroy.AddListener(delegate {  });
     }
 
     void Update()
@@ -57,20 +57,20 @@ public class EnemyController : MonoBehaviour
         _ball.health -= damage;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)  // Получает урон от игрока
     {
         if (other.gameObject.CompareTag("Player"))
         {
             TakeDamage(_ball.damage);
             if (_health <= 0)
             {
-                GameMana.enemyDestroy.Invoke();
+                gameManager.enemyDestroy.Invoke();
                 Destroy(this.gameObject);
             }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)  // Наносит урон игроку и перезапускает сцену
     {
         if (other.CompareTag("Player"))
         {
