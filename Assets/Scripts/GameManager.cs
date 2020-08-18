@@ -1,25 +1,20 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-	#region Singleton class: GameManager
-
-	public static GameManager Instance;
-
-	void Awake ()
-	{
-		if (Instance == null) {
-			Instance = this;
-		}
-	}
-
-	#endregion
-
+	public UnityEvent enemyDestroy;
+	
 	Camera cam;
 
 	public Ball ball;
 	public Trajectory trajectory;
 	[SerializeField] float pushForce = 4f;
+
+	private List<GameObject> portals = new List<GameObject>();
+	private int currentRoom = 0;
+	public int countPortal = 1;
 
 	bool isDragging = false;
 
@@ -34,6 +29,16 @@ public class GameManager : MonoBehaviour
 	{
 		cam = Camera.main;
 		ball.DesactivateRb ();
+
+		for (int i = 1; i <= countPortal; i++)
+		{
+			portals.Add(GameObject.Find("Portal" + i));
+		}
+
+		foreach (var portal in portals)
+		{
+			portal.SetActive(false);	
+		}
 	}
 
 	void Update ()
@@ -50,6 +55,12 @@ public class GameManager : MonoBehaviour
 		if (isDragging) {
 			OnDrag ();
 		}
+	}
+
+	public void PortalActive()
+	{
+		portals[currentRoom].SetActive(true);
+		currentRoom++;
 	}
 
 	//-Drag--------------------------------------

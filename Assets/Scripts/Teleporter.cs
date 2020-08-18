@@ -27,7 +27,7 @@ public class Teleporter : MonoBehaviour
     void Start()
     {
         spr = gameObject.GetComponent<SpriteRenderer>();
-        audS = gameObject.GetComponent<AudioSource>();
+        //audS = gameObject.GetComponent<AudioSource>();
         // mat = gameObject.GetComponent<Renderer>().material;
     }
 
@@ -42,8 +42,8 @@ public class Teleporter : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
 
             // Plays the sound - only if it's defined
-            audS.clip = teleport;
-            audS.Play();
+            // audS.clip = teleport;
+            // audS.Play();
         }
 
         // Sets both ends to be classed as entered.

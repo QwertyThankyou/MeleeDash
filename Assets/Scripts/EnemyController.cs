@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
+    private GameManager GameMana;
+    
     private int _health = 2;     // Здоровье врага
     private int _damage = 1;     // Урон
     private float _speed = 2f;   // Скорость передвижения
@@ -24,6 +26,9 @@ public class EnemyController : MonoBehaviour
     {
         _player = GameObject.FindWithTag("Player").transform;
         _ball = GameObject.FindWithTag("Player").GetComponent<Ball>();
+
+        GameMana = GameObject.Find("GameManager").GetComponent<GameManager>();
+        GameMana.enemyDestroy.AddListener(delegate {  });
     }
 
     void Update()
@@ -57,7 +62,11 @@ public class EnemyController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             TakeDamage(_ball.damage);
-            if (_health <= 0) Destroy(this.gameObject);
+            if (_health <= 0)
+            {
+                GameMana.enemyDestroy.Invoke();
+                Destroy(this.gameObject);
+            }
         }
     }
 

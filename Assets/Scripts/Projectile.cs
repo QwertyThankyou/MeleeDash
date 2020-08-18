@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cinemachine.Utility;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Bullet : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
 
     public float speed;
@@ -10,13 +12,10 @@ public class Bullet : MonoBehaviour
     private Transform player;
     private Vector2 target;
 
-    void start()
+    void Start()
     {
-
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-
+        player = GameObject.FindGameObjectWithTag("Player").transform; 
         target = new Vector2(player.position.x, player.position.y);
-
     }
 
     void Update()
@@ -28,12 +27,12 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(
-    Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            DestroyProjectile();
+            //DestroyProjectile();
+            SceneManager.LoadScene(0);
         }
     }
 
