@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class EnemyController : MonoBehaviour
+public class EnemyShooter : MonoBehaviour
 {
     private GameManager _gameManager;
     
     [Header("Stats")]
     public int health = 2;     // Здоровье врага
-    public int damage = 1;     // Урон
     public float speed = 2f;   // Скорость передвижения
     public float _viewRad = 40f;  // Радиус обнаружения
 
@@ -22,7 +18,14 @@ public class EnemyController : MonoBehaviour
     public float speedRotate = 1f; // Скорость поворота
     public int rotationOffset = -90; // Каким боком будет идти в сторону игрока
     private float _rot;              // Хуй знает что такое
-
+    
+    [Header("Ammo")]
+    public GameObject ammo;           // Будет хранить ссылку на боеприпас
+    public GameObject spawnPointAmmo; // Позиция появления боеприпаса
+    public float ammoSpeed;           // Скорость 
+    public float startTimeBtwShots = 2;
+    private float timeBtwShots;
+    
     void Start()
     {
         _player = GameObject.FindWithTag("Player").transform;
@@ -30,6 +33,8 @@ public class EnemyController : MonoBehaviour
 
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         _gameManager.enemyDestroy.AddListener(delegate {  });
+        
+        timeBtwShots = startTimeBtwShots;
     }
 
     void Update()
@@ -46,16 +51,39 @@ public class EnemyController : MonoBehaviour
  
         Quaternion rotation = Quaternion.AngleAxis (_rot + rotationOffset, Vector3.forward);
         transform.rotation = Quaternion.Slerp (transform.rotation, rotation, Time.deltaTime * speedRotate);
+        
+        if(timeBtwShots <= 0)
+        {
+            CreateAmmo();
+            timeBtwShots = startTimeBtwShots;
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
+    }
+    
+    void CreateAmmo()
+    {
+        Vector2 ammoPosition = spawnPointAmmo.transform.position; // Позиция появления боеприпаса
+        Vector2 ammoForse; // Направление силы, которая будет применена к объекту
+
+        // Определяем вектор, по котором должен лететь боеприпас (снаряд)
+        float x = spawnPointAmmo.transform.position.x - transform.position.x;
+        float y = spawnPointAmmo.transform.position.y - transform.position.y;
+
+        ammoForse = new Vector2(x, y); // Сила с вычисленными параметрами
+
+        // Создаем объект с помощью Instantiate и сохраняем его в переменную createAmmo
+        GameObject createAmmo = Instantiate(ammo, ammoPosition, transform.rotation) as GameObject;
+
+        // Применяем силу к боеприпасу (снаряду)
+        createAmmo.GetComponent<Rigidbody2D>().AddForce(ammoForse * ammoSpeed, ForceMode2D.Impulse);
     }
 
     private void TakeDamage(int x) // Наносит урон
     {
         health -= x;
-    }
-
-    private void GiveDamage(int x) // Получает урон
-    {
-        _ball.health -= x;
     }
 
     private void OnCollisionEnter2D(Collision2D other)  // Получает урон от игрока
@@ -68,18 +96,6 @@ public class EnemyController : MonoBehaviour
                 CinemachineShake.Instance.ShakeCamera(5f, 1f);
                 _gameManager.enemyDestroy.Invoke();
                 Destroy(this.gameObject);
-            }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)  // Наносит урон игроку и перезапускает сцену
-    {
-        if (other.CompareTag("Player"))
-        {
-            GiveDamage(damage);
-            if (_ball.health <= 0)
-            {
-                SceneManager.LoadScene(0);
             }
         }
     }

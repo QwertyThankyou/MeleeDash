@@ -10,13 +10,20 @@ public class Ball : MonoBehaviour
 
 	[HideInInspector] public Vector2 pos { get { return transform.position; } }
 
-	[HideInInspector] public int health;
-	[HideInInspector] public int damage = 1;
+	 public int health = 1;
+	 public int damage = 1;
 
 	void Awake ()
 	{
 		rb = GetComponent<Rigidbody2D> ();
 		col = GetComponent<CircleCollider2D> ();
+		
+		StatsChanger();
+	}
+
+	private void StatsChanger()  // Подгружает значения здоровья и урона из json
+	{
+		 return;
 	}
 
 	public void Push (Vector2 force)
@@ -38,6 +45,14 @@ public class Ball : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.gameObject.CompareTag("Trap")) SceneManager.LoadScene(0);
+		if (other.gameObject.CompareTag("Trap"))
+		{
+			CinemachineShake.Instance.ShakeCamera(5f, 0.5f);
+			health--;
+			if (health <= 0)
+			{
+				SceneManager.LoadScene(0);
+			}
+		}
 	}
 }
