@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class EnemyShooter : MonoBehaviour
@@ -25,6 +26,9 @@ public class EnemyShooter : MonoBehaviour
     public float ammoSpeed;           // Скорость 
     public float startTimeBtwShots = 2;
     private float timeBtwShots;
+
+    [Header("Particle")]
+    public GameObject particle;
     
     void Start()
     {
@@ -91,6 +95,7 @@ public class EnemyShooter : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             TakeDamage(_ball.damage);
+            Instantiate(particle, transform.position, Quaternion.identity);
             if (health <= 0)
             {
                 CinemachineShake.Instance.ShakeCamera(5f, 1f);

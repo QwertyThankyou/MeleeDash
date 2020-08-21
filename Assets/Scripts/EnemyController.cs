@@ -22,6 +22,9 @@ public class EnemyController : MonoBehaviour
     public float speedRotate = 1f; // Скорость поворота
     public int rotationOffset = -90; // Каким боком будет идти в сторону игрока
     private float _rot;              // Хуй знает что такое
+    
+    [Header("Particle")]
+    public GameObject particle;
 
     void Start()
     {
@@ -55,7 +58,9 @@ public class EnemyController : MonoBehaviour
 
     private void GiveDamage(int x) // Получает урон
     {
+        _ball.isHurt = true;
         _ball.health -= x;
+        _ball.PlayerHurt();
     }
 
     private void OnCollisionEnter2D(Collision2D other)  // Получает урон от игрока
@@ -63,6 +68,7 @@ public class EnemyController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             TakeDamage(_ball.damage);
+            Instantiate(particle, transform.position, Quaternion.identity);
             if (health <= 0)
             {
                 CinemachineShake.Instance.ShakeCamera(5f, 1f);
@@ -74,7 +80,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)  // Наносит урон игроку и перезапускает сцену
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && _ball.isHurt == false)
         {
             GiveDamage(damage);
             if (_ball.health <= 0)

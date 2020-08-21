@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,12 +14,33 @@ public class Ball : MonoBehaviour
 	 public int health = 1;
 	 public int damage = 1;
 
+	 [HideInInspector]public bool isHurt = false;
+
+	 private GameObject _particleMagnit;
+	 private ParticleSystem _particleSystem;
+
 	void Awake ()
 	{
 		rb = GetComponent<Rigidbody2D> ();
 		col = GetComponent<CircleCollider2D> ();
+		_particleMagnit = transform.Find("HurtPlayer").gameObject;
+		_particleSystem = _particleMagnit.GetComponent<ParticleSystem>();
+		_particleMagnit.SetActive(false);
 		
 		StatsChanger();
+	}
+
+	public void PlayerHurt()
+	{
+		StartCoroutine(HurtPlayer());
+	}
+
+	public IEnumerator HurtPlayer()
+	{
+		_particleMagnit.SetActive(true);
+		yield return new WaitForSeconds(_particleSystem.main.duration);
+		_particleMagnit.SetActive(false);
+		isHurt = false;
 	}
 
 	private void StatsChanger()  // Подгружает значения здоровья и урона из json
@@ -48,11 +70,17 @@ public class Ball : MonoBehaviour
 		if (other.gameObject.CompareTag("Trap"))
 		{
 			CinemachineShake.Instance.ShakeCamera(5f, 0.5f);
+			StartCoroutine(HurtPlayer());
 			health--;
 			if (health <= 0)
 			{
 				SceneManager.LoadScene(0);
 			}
 		}
+	}
+
+	private void OnDisable()
+	{
+		StopAllCoroutines();
 	}
 }

@@ -113,7 +113,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f29eddde1c92f47a2f016b97c7b8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 2
+  damage: 1
+  speed: 2
+  _viewRad: 40
+  speedRotate: 1
   rotationOffset: -90
+  particle: {fileID: 4533109993563810367, guid: 0cb678ae161fa2548924194518822e54,
+    type: 3}
 --- !u!1 &6331131330547090915
 GameObject:
   m_ObjectHideFlags: 0
