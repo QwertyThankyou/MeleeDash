@@ -41,8 +41,6 @@ GameObject:
   - component: {fileID: 6221663124940103423}
   - component: {fileID: 6221663124940103422}
   - component: {fileID: 6221663124940103417}
-  - component: {fileID: 6221663124940103394}
-  - component: {fileID: 6221663124940103421}
   - component: {fileID: 6221663124940103420}
   m_Layer: 0
   m_Name: RangeBodyL1
@@ -135,43 +133,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6221663124940103394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6221663124940103416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 496ddeb1765e4fe4ab6fd6a6109b68f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  stoppingDistance: 4
-  retreaDistance: 2
-  startTimeBtwShots: 2
-  player: {fileID: 0}
-  projectile: {fileID: 4353079015225948877, guid: 1af3557b2b344e440974e0e1ce074bb4,
-    type: 3}
---- !u!114 &6221663124940103421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6221663124940103416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17f29eddde1c92f47a2f016b97c7b8aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 2
-  damage: 1
-  speed: 2
-  _viewRad: 40
-  speedRotate: 1
-  rotationOffset: -90
 --- !u!58 &6221663124940103420
 CircleCollider2D:
   m_ObjectHideFlags: 0
