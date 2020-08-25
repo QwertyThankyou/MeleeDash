@@ -61,7 +61,7 @@ public class Ball : MonoBehaviour
 	public void DesactivateRb ()
 	{
 		rb.velocity = Vector2.zero;
-		rb.angularVelocity = 0.2f;
+		rb.angularVelocity = 0.5f;
 		Time.timeScale = timeSpeed;
 	}
 
