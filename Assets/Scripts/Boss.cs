@@ -1,30 +1,29 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class EnemyController : MonoBehaviour
+public class Boss : MonoBehaviour
 {
     private GameManager _gameManager;
     
     [Header("Stats")]
-    public int health = 2;     // Здоровье врага
+    public int health = 20;     // Здоровье врага
     public int damage = 1;     // Урон
     public float speed = 2f;   // Скорость передвижения
     public float viewRad = 40f;  // Радиус обнаружения
 
     private Transform _player;
     private Ball _ball;
-    
-    [Header("Rotate")]
-    public float speedRotate = 1f; // Скорость поворота
-    public int rotationOffset = -90; // Каким боком будет идти в сторону игрока
-    private float _rot;              // Хуй знает что такое
-    
+
     [Header("Particle")]
     public GameObject particle;
+    
+    public Slider slider;
+
+    private Animator _animator;
+   
 
     void Start()
     {
@@ -33,23 +32,34 @@ public class EnemyController : MonoBehaviour
 
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         _gameManager.enemyDestroy.AddListener(delegate {  });
+
+        _animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (Vector2.Distance(transform.position, _player.position) < viewRad) Angry();
+        if (Vector2.Distance(transform.position, _player.position) < viewRad && _animator.GetCurrentAnimatorStateInfo(0).IsName("Attackboss1")) Angry();
+        // if (health >= health / 2) StageOne();
+        // else StageTwo();
+        
+        slider.value = health;
     }
+
+    // private void StageOne()
+    // {
+    //     
+    // }
+    //
+    // private void StageTwo()
+    // {
+    //     
+    // }
     
     void Angry()
     {
         transform.position = Vector2.MoveTowards(transform.position, _player.position, speed * Time.deltaTime);
-        
-        Vector2 difference = _player.position - transform.position;
-        _rot = Mathf.Atan2 (difference.y, difference.x) * Mathf.Rad2Deg;
- 
-        Quaternion rotation = Quaternion.AngleAxis (_rot + rotationOffset, Vector3.forward);
-        transform.rotation = Quaternion.Slerp (transform.rotation, rotation, Time.deltaTime * speedRotate);
     }
+    
 
     private void TakeDamage(int x) // Наносит урон
     {

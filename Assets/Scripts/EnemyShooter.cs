@@ -10,7 +10,7 @@ public class EnemyShooter : MonoBehaviour
     [Header("Stats")]
     public int health = 2;     // Здоровье врага
     public float speed = 2f;   // Скорость передвижения
-    public float _viewRad = 40f;  // Радиус обнаружения
+    public float viewRad = 40f;  // Радиус обнаружения
 
     private Transform _player;
     private Ball _ball;
@@ -25,7 +25,7 @@ public class EnemyShooter : MonoBehaviour
     public GameObject spawnPointAmmo; // Позиция появления боеприпаса
     public float ammoSpeed;           // Скорость 
     public float startTimeBtwShots = 2;
-    private float timeBtwShots;
+    private float _timeBtwShots;
 
     [Header("Particle")]
     public GameObject particle;
@@ -38,12 +38,12 @@ public class EnemyShooter : MonoBehaviour
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         _gameManager.enemyDestroy.AddListener(delegate {  });
         
-        timeBtwShots = startTimeBtwShots;
+        _timeBtwShots = startTimeBtwShots;
     }
 
     void Update()
     {
-        if (Vector2.Distance(transform.position, _player.position) < _viewRad) Angry();
+        if (Vector2.Distance(transform.position, _player.position) < viewRad) Angry();
     }
     
     void Angry()
@@ -56,14 +56,14 @@ public class EnemyShooter : MonoBehaviour
         Quaternion rotation = Quaternion.AngleAxis (_rot + rotationOffset, Vector3.forward);
         transform.rotation = Quaternion.Slerp (transform.rotation, rotation, Time.deltaTime * speedRotate);
         
-        if(timeBtwShots <= 0)
+        if(_timeBtwShots <= 0)
         {
             CreateAmmo();
-            timeBtwShots = startTimeBtwShots;
+            _timeBtwShots = startTimeBtwShots;
         }
         else
         {
-            timeBtwShots -= Time.deltaTime;
+            _timeBtwShots -= Time.deltaTime;
         }
     }
     
