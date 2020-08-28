@@ -56,7 +56,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &6331131329702635849
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
   health: 2
   damage: 1
   speed: 2
-  _viewRad: 40
+  viewRad: 20
   speedRotate: 1
   rotationOffset: -90
   particle: {fileID: 4533109993563810367, guid: 0cb678ae161fa2548924194518822e54,
@@ -190,7 +190,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -3958795875092402317, guid: 38fd98c903d4a6a4aac257210aa2b5e5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -272,7 +272,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: -1659881604871170586, guid: 38fd98c903d4a6a4aac257210aa2b5e5,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

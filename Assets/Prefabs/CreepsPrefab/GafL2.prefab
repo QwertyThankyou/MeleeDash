@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057379127701741241}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.6552885, y: 4.31981, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2057379128285127593}
@@ -77,7 +77,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &2057379127701741238
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -147,7 +147,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f29eddde1c92f47a2f016b97c7b8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 2
+  damage: 1
+  speed: 2
+  viewRad: 20
+  speedRotate: 1
   rotationOffset: -90
+  particle: {fileID: 0}
 --- !u!1 &2057379128285127592
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +223,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 4104942865820607984, guid: c069610de63f95043abe652e68a385a6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -299,7 +305,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -8133044978135925356, guid: c069610de63f95043abe652e68a385a6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -381,7 +387,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -8133044978135925356, guid: c069610de63f95043abe652e68a385a6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
