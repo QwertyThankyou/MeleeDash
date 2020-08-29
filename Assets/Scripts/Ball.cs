@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour
 	[HideInInspector] public float timeSpeed = 0.8f;
 
 	[HideInInspector] public Vector2 pos { get { return transform.position; } }
-
+	
 	 public int health = 1;
 	 public int damage = 1;
 

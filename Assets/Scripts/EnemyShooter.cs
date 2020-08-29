@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyShooter : MonoBehaviour
 {
@@ -29,6 +29,10 @@ public class EnemyShooter : MonoBehaviour
 
     [Header("Particle")]
     public GameObject particle;
+    
+    [Header("Money")]
+    public GameObject money;
+    public int moneyForDeath = 1;
     
     void Start()
     {
@@ -100,6 +104,10 @@ public class EnemyShooter : MonoBehaviour
             {
                 CinemachineShake.Instance.ShakeCamera(5f, 1f);
                 _gameManager.enemyDestroy.Invoke();
+                for (int i = 0; i < moneyForDeath; i++)
+                {
+                    Instantiate(money, transform.position + new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f)), Quaternion.identity);
+                }
                 Destroy(this.gameObject);
             }
         }

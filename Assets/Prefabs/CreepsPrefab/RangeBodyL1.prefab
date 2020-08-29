@@ -195,3 +195,5 @@ MonoBehaviour:
   startTimeBtwShots: 2
   particle: {fileID: 4533109993563810367, guid: 0cb678ae161fa2548924194518822e54,
     type: 3}
+  money: {fileID: 4382452869260622114, guid: d5a0ed157c8f23849a779735cf1b7076, type: 3}
+  moneyForDeath: 1

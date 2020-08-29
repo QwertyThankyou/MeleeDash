@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
 		if (enemyCountInRoom[currentRoom] == enemyKill)
 		{
 			PortalActive();
+			Bank.isDone = true;
 			enemyKill = 0;
 		}
 	}

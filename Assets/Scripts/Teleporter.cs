@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -40,6 +41,8 @@ public class Teleporter : MonoBehaviour
             float offset = 0.1f;
             collision.gameObject.transform.position = pointB.transform.position + new Vector3(0f, offset, 0f);
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+
+            Bank.isDone = false;
 
             // Plays the sound - only if it's defined
             // audS.clip = teleport;

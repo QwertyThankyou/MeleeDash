@@ -7313,7 +7313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: a3dacaec0287d7444b4bd276816e1666, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 0
+  m_AmplitudeGain: 3.5895
   m_FrequencyGain: 5
   mNoiseOffsets: {x: 577.83484, y: -868.06055, z: -338.1063}
 --- !u!1 &230705070
@@ -15048,7 +15048,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.5, z: -10}
+  m_LocalPosition: {x: 0, y: -5.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -27428,7 +27428,7 @@ PrefabInstance:
     - target: {fileID: 4944659007899433108, guid: 885c941287af10e43a8b542fc7ca7408,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4944659007899433108, guid: 885c941287af10e43a8b542fc7ca7408,
         type: 3}
@@ -30165,7 +30165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467619185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.5, z: -10}
+  m_LocalPosition: {x: 0, y: -5.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 226009693}
@@ -38464,7 +38464,7 @@ PrefabInstance:
     - target: {fileID: 1447943009295093792, guid: fcd51131fe1448b4b9903ca0f1f709c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.5
+      value: -5.5
       objectReference: {fileID: 0}
     - target: {fileID: 1447943009295093792, guid: fcd51131fe1448b4b9903ca0f1f709c9,
         type: 3}
