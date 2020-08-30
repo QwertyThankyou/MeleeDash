@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
 	public UnityEvent enemyDestroy;  // Вызывается при смерти enemy
+
+	public DataManager dataManager;
+	public Text health;
+	public Text damage;
 	
 	Camera cam;
 
@@ -52,6 +57,22 @@ public class GameManager : MonoBehaviour
 		if (isDragging) {
 			OnDrag ();
 		}
+
+		damage.text = ball.damage.ToString();
+		health.text = ball.health.ToString();
+	}
+
+	public void SaveButton()
+	{
+		dataManager.data.heatlh = ball.health;
+		dataManager.Save();
+	}
+
+	public void LoadButton()
+	{
+		dataManager.Load();
+		ball.damage = Bank.damage;
+		ball.health = Bank.health;
 	}
 
 	public void EnemyKill()  // Вызывается при уничтожении enemy

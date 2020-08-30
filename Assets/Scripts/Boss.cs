@@ -42,7 +42,7 @@ public class Boss : MonoBehaviour
         // if (health >= health / 2) StageOne();
         // else StageTwo();
         
-        slider.value = health;
+        //slider.value = health;
     }
 
     // private void StageOne()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -45,7 +46,8 @@ public class Ball : MonoBehaviour
 
 	private void StatsChanger()  // Подгружает значения здоровья и урона из json
 	{
-		 return;
+		health = Bank.health;
+		damage = Bank.damage;
 	}
 
 	public void Push (Vector2 force)
