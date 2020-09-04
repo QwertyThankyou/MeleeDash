@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5225975257834883135}
   - component: {fileID: 5225975257834883134}
-  - component: {fileID: 597070290865616022}
+  - component: {fileID: 8605879341294880554}
+  - component: {fileID: 7750613664458222347}
+  - component: {fileID: 7190194842659409368}
   m_Layer: 0
   m_Name: Boss1
   m_TagString: Enemy
@@ -53,7 +55,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &597070290865616022
+--- !u!58 &8605879341294880554
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,6 +71,46 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!50 &7750613664458222347
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225975257834883105}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 100
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &7190194842659409368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5225975257834883105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0800bf3f6f33474486d10f9b099111a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  damage: 1
+  speed: 4
+  viewRad: 40
+  particle: {fileID: 4533109993563810367, guid: 0cb678ae161fa2548924194518822e54,
+    type: 3}
+  slider: {fileID: 0}
 --- !u!1 &5225975258868897484
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,8 +180,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eac04517c7ccc934fb2a58fc4d6e69a5, type: 3}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: -3939466558790193392, guid: 16ce0ad82996b7d4a9758d8983ab84ec,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -219,8 +262,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1e9059d0e12bffd4986e048e5160f068, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 2576699053530627272, guid: 16ce0ad82996b7d4a9758d8983ab84ec,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

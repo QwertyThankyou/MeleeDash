@@ -7,7 +7,7 @@ using UnityEngine;
 public class Money : MonoBehaviour
 {
     private Transform _player;
-    private float _speed = 10f;
+    private float _speed = 20f;
     
     void Start()
     {

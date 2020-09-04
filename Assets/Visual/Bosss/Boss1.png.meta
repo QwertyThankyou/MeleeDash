@@ -126,34 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss1_0
-      rect:
-        serializedVersion: 2
-        x: 279
-        y: 536
-        width: 140
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2dd42cf2fedec860800000000000000
-      internalID: 7552218760340626732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Boss1_1
       rect:
         serializedVersion: 2
-        x: 724
-        y: 152
-        width: 400
-        height: 400
+        x: 740
+        y: 132
+        width: 416
+        height: 419
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,34 +147,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss1_2
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 281
-        width: 140
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a5d8f3f560d60240800000000000000
-      internalID: 4757719192666953126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Boss1_3
       rect:
         serializedVersion: 2
-        x: 534
-        y: 281
-        width: 140
-        height: 140
+        x: 4
+        y: 8
+        width: 684
+        height: 684
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,27 +163,6 @@ TextureImporter:
       bones: []
       spriteID: 8cc37c2232642c320800000000000000
       internalID: 2576699053530627272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss1_4
-      rect:
-        serializedVersion: 2
-        x: 279
-        y: 26
-        width: 140
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39af4263117ba2120800000000000000
-      internalID: 2389923836824189587
       vertices: []
       indices: 
       edges: []
