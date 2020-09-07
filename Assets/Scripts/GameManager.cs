@@ -58,8 +58,8 @@ public class GameManager : MonoBehaviour
 			OnDrag ();
 		}
 
-		damage.text = ball.damage.ToString();
-		health.text = ball.health.ToString();
+		// damage.text = ball.damage.ToString();
+		// health.text = ball.health.ToString();
 	}
 
 	public void SaveButton()

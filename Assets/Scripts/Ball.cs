@@ -28,7 +28,7 @@ public class Ball : MonoBehaviour
 		_particleSystem = _particleMagnit.GetComponent<ParticleSystem>();
 		_particleMagnit.SetActive(false);
 		
-		StatsChanger();
+		//StatsChanger();
 	}
 
 	public void PlayerHurt()

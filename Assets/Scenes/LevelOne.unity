@@ -40530,7 +40530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.25, y: 357.5, z: -10}
+  m_LocalPosition: {x: 0, y: -6.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60967,7 +60967,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467619185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.25, y: 357.5, z: -10}
+  m_LocalPosition: {x: 0, y: -6.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 226009693}
@@ -61170,7 +61170,7 @@ Transform:
   m_Children:
   - {fileID: 100309741}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1484421066
 PrefabInstance:
@@ -62364,7 +62364,7 @@ Transform:
   m_Children:
   - {fileID: 61794258}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1518409780
 GameObject:
@@ -64695,7 +64695,7 @@ MonoBehaviour:
   trajectory: {fileID: 1518409781}
   pushForce: 3.5
   countPortal: 9
-  enemyCountInRoom: 020000000300000006000000010000000200000001000000050000000a00000006000000
+  enemyCountInRoom: 020000000300000006000000010000000500000001000000030000000800000005000000
 --- !u!4 &1617952172
 Transform:
   m_ObjectHideFlags: 0
@@ -64708,7 +64708,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1624039010
 PrefabInstance:
@@ -74486,7 +74486,7 @@ Transform:
   m_Children:
   - {fileID: 1993552556}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2143579238
 GameObject:
@@ -74803,12 +74803,12 @@ PrefabInstance:
     - target: {fileID: 1447943009295093792, guid: fcd51131fe1448b4b9903ca0f1f709c9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1447943009295093792, guid: fcd51131fe1448b4b9903ca0f1f709c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 357.5
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 1447943009295093792, guid: fcd51131fe1448b4b9903ca0f1f709c9,
         type: 3}
@@ -74838,7 +74838,7 @@ PrefabInstance:
     - target: {fileID: 1447943009295093792, guid: fcd51131fe1448b4b9903ca0f1f709c9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1447943009295093792, guid: fcd51131fe1448b4b9903ca0f1f709c9,
         type: 3}
@@ -74859,6 +74859,11 @@ PrefabInstance:
         type: 3}
       propertyPath: health
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1447943009295093804, guid: fcd51131fe1448b4b9903ca0f1f709c9,
+        type: 3}
+      propertyPath: damage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd51131fe1448b4b9903ca0f1f709c9, type: 3}
