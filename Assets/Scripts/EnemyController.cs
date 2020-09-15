@@ -31,7 +31,9 @@ public class EnemyController : MonoBehaviour
     public GameObject money;
     public int moneyForDeath = 1;
     
-
+    [Header("AudioManager")] 
+    public AudioManager audioManager;
+    
     void Start()
     {
         _player = GameObject.FindWithTag("Player").transform;
@@ -95,7 +97,7 @@ public class EnemyController : MonoBehaviour
             GiveDamage(damage);
             if (_ball.health <= 0)
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
     }

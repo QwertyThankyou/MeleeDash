@@ -23,8 +23,9 @@ public class Boss : MonoBehaviour
     public Slider slider;
 
     private Animator _animator;
-   
 
+    [Header("AudioManager")] 
+    public AudioManager audioManager;
     void Start()
     {
         _player = GameObject.FindWithTag("Player").transform;
@@ -88,15 +89,12 @@ public class Boss : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)  // Наносит урон игроку и перезапускает сцену
+    public void GiveDamageGun()
     {
-        if (other.CompareTag("Player") && _ball.isHurt == false)
+        GiveDamage(damage);
+        if (_ball.health <= 0)
         {
-            GiveDamage(damage);
-            if (_ball.health <= 0)
-            {
-                SceneManager.LoadScene(0);
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

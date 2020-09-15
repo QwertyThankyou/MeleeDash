@@ -16,6 +16,9 @@ public class Ball : MonoBehaviour
 	 public int damage = 1;
 
 	 [HideInInspector]public bool isHurt = false;
+	 
+	 [Header("AudioManager")] 
+	 public AudioManager audioManager;
 
 	 private GameObject _particleMagnit;
 	 private ParticleSystem _particleSystem;
@@ -35,8 +38,8 @@ public class Ball : MonoBehaviour
 	{
 		StartCoroutine(HurtPlayer());
 	}
-
-	public IEnumerator HurtPlayer()
+	
+	private IEnumerator HurtPlayer()
 	{
 		_particleMagnit.SetActive(true);
 		yield return new WaitForSeconds(_particleSystem.main.duration);
@@ -76,7 +79,7 @@ public class Ball : MonoBehaviour
 			health--;
 			if (health <= 0)
 			{
-				SceneManager.LoadScene(0);
+				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 			}
 		}
 	}

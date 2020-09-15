@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
 	public Ball ball;
 	public Trajectory trajectory;
 	[SerializeField] float pushForce = 4f;
+	
+	[Header("AudioManager")] 
+	public AudioManager audioManager;
 
 	private List<GameObject> portals = new List<GameObject>(); // Лист с GameObject порталами
 	private int currentRoom = 0; // Номер комнаты, в которой находится игрок, по умолчанию спавнимся в первой (нулевой)
