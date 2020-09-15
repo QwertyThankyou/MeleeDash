@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8440972746739053721}
   - component: {fileID: 8440972746739053722}
-  - component: {fileID: 3635598721417311647}
+  - component: {fileID: 9211175997966486388}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Trap
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &3635598721417311647
-PolygonCollider2D:
+--- !u!61 &9211175997966486388
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,8 +106,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.4, y: 0.5}
-      - {x: 0, y: -0.3}
-      - {x: 0.4, y: 0.5}
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0

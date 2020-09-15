@@ -104,15 +104,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f29eddde1c92f47a2f016b97c7b8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 6
   damage: 1
   speed: 2
   viewRad: 20
   speedRotate: 1
-  rotationOffset: -90
-  particle: {fileID: 0}
-  money: {fileID: 0}
-  moneyForDeath: 1
+  rotationOffset: 0
+  particle: {fileID: 4533109993563810367, guid: 0cb678ae161fa2548924194518822e54,
+    type: 3}
+  money: {fileID: 4382452869260622114, guid: d5a0ed157c8f23849a779735cf1b7076, type: 3}
+  moneyForDeath: 7
 --- !u!1 &2057379128285127592
 GameObject:
   m_ObjectHideFlags: 0
