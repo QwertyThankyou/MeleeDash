@@ -82,6 +82,15 @@ public class Ball : MonoBehaviour
 				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 			}
 		}
+
+		// if (other.gameObject.CompareTag("Enemy"))
+		// {
+		// 	audioManager.Play("");
+		// }
+		// if (other.gameObject.CompareTag("Wall"))
+		// {
+		// 	audioManager.Play("");
+		// }
 	}
 
 	private void OnDisable()
