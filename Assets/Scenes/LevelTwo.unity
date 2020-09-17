@@ -2604,7 +2604,7 @@ PrefabInstance:
     - target: {fileID: 1447943009295093792, guid: fcd51131fe1448b4b9903ca0f1f709c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 358.69
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1447943009295093792, guid: fcd51131fe1448b4b9903ca0f1f709c9,
         type: 3}
@@ -6164,7 +6164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721155989}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 358.69, z: -10}
+  m_LocalPosition: {x: -0.75, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6760,6 +6760,7 @@ MonoBehaviour:
   ball: {fileID: 931248666}
   trajectory: {fileID: 294535320}
   pushForce: 3.5
+  audioManager: {fileID: 0}
   countPortal: 9
   enemyCountInRoom: 030000000800000001000000040000000100000005000000040000001700000005000000
 --- !u!4 &780866922
@@ -41262,7 +41263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999441393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 358.69, z: -10}
+  m_LocalPosition: {x: -0.75, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 854608057}

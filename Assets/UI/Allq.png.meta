@@ -1,0 +1,953 @@
+fileFormatVersion: 2
+guid: 5ec609473213b96498ee07127a0901a5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6665016633090960398
+    second: Allq_0
+  - first:
+      213: 8207700856406481681
+    second: Allq_1
+  - first:
+      213: -4420186285828085443
+    second: Allq_2
+  - first:
+      213: -7383215823510138974
+    second: Allq_3
+  - first:
+      213: -5626195862362164698
+    second: Allq_4
+  - first:
+      213: 7546950728140986428
+    second: Allq_5
+  - first:
+      213: -7265215486507251139
+    second: Allq_6
+  - first:
+      213: 7001913062887461553
+    second: Allq_7
+  - first:
+      213: -4745239819824116220
+    second: Allq_8
+  - first:
+      213: 8444458479575263900
+    second: Allq_9
+  - first:
+      213: 2933363958428669156
+    second: Allq_10
+  - first:
+      213: -5407386911995037043
+    second: Allq_11
+  - first:
+      213: -4482465269206640188
+    second: Allq_12
+  - first:
+      213: -5445393910107309093
+    second: Allq_13
+  - first:
+      213: 4433861987598353989
+    second: Allq_14
+  - first:
+      213: -3783609660566283212
+    second: Allq_15
+  - first:
+      213: 4125354032880655686
+    second: Allq_16
+  - first:
+      213: 3229481176837057977
+    second: Allq_17
+  - first:
+      213: -7942290840130606570
+    second: Allq_18
+  - first:
+      213: 2947976460906747852
+    second: Allq_19
+  - first:
+      213: 1745713020167407687
+    second: Allq_20
+  - first:
+      213: -5610237449538473697
+    second: Allq_21
+  - first:
+      213: 5482348909672119718
+    second: Allq_22
+  - first:
+      213: -4533831871192062334
+    second: Allq_23
+  - first:
+      213: -2745316709373949221
+    second: Allq_24
+  - first:
+      213: -4262685285952917272
+    second: Allq_25
+  - first:
+      213: 2649987001896996995
+    second: Allq_26
+  - first:
+      213: -5894729420191004879
+    second: Allq_27
+  - first:
+      213: -3137893281486314588
+    second: Allq_28
+  - first:
+      213: 174451343232099144
+    second: Allq_29
+  - first:
+      213: 8391702210535807108
+    second: Allq_30
+  - first:
+      213: 1045433446802423512
+    second: Allq_31
+  - first:
+      213: 4136049293424463145
+    second: Allq_32
+  - first:
+      213: 8353958084638579164
+    second: Allq_33
+  - first:
+      213: 8054230473251491236
+    second: Allq_34
+  - first:
+      213: 1656668141470711275
+    second: Allq_35
+  - first:
+      213: -5029117495229722342
+    second: Allq_36
+  - first:
+      213: 2631380147634502579
+    second: Allq_37
+  - first:
+      213: -4075327503952058314
+    second: Allq_38
+  - first:
+      213: -5413582197388474184
+    second: Allq_39
+  - first:
+      213: -6434828653702170257
+    second: Allq_40
+  - first:
+      213: -3999122396564558830
+    second: Allq_41
+  - first:
+      213: 2574251404011046868
+    second: Allq_42
+  - first:
+      213: 5625447342755601062
+    second: Allq_43
+  - first:
+      213: -7946958916175252694
+    second: Allq_44
+  - first:
+      213: -8051342312292712938
+    second: Allq_45
+  - first:
+      213: -2670154836410768946
+    second: Allq_46
+  - first:
+      213: 3244423745515718943
+    second: Allq_47
+  - first:
+      213: -5045406141393064533
+    second: Allq_48
+  - first:
+      213: -2667027275686154615
+    second: Allq_49
+  - first:
+      213: -6980198157053964712
+    second: Allq_50
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Allq_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1798
+        width: 204
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ce475a055ee7c50800000000000000
+      internalID: 6665016633090960398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_1
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1929
+        width: 104
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b17c0517c97e170800000000000000
+      internalID: 8207700856406481681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_3
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1920
+        width: 68
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af82a3935c898990800000000000000
+      internalID: -7383215823510138974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_4
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 1933
+        width: 100
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622712b0cacbbe1b0800000000000000
+      internalID: -5626195862362164698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_5
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1930
+        width: 95
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c381838a3b72cb860800000000000000
+      internalID: 7546950728140986428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_7
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1688
+        width: 640
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2139d35dacb2160800000000000000
+      internalID: 7001913062887461553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_8
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1940
+        width: 22
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e48557685852eb0800000000000000
+      internalID: -4745239819824116220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_9
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1926
+        width: 304
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a6e9b1f3eb03570800000000000000
+      internalID: 8444458479575263900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_10
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1948
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e413138af665b820800000000000000
+      internalID: 2933363958428669156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_14
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 1747
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54648e17cfd388d30800000000000000
+      internalID: 4433861987598353989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_15
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1750
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43cd5356f0bed7bc0800000000000000
+      internalID: -3783609660566283212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_16
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1736
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d9396c2a3304930800000000000000
+      internalID: 4125354032880655686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_17
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 1740
+        width: 124
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bdee22150c61dc20800000000000000
+      internalID: 3229481176837057977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_18
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 1736
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a2d2b9f8057c190800000000000000
+      internalID: -7942290840130606570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_19
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1736
+        width: 120
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc75f8ed8f059e820800000000000000
+      internalID: 2947976460906747852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_20
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 1744
+        width: 100
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7484ade1eb40a3810800000000000000
+      internalID: 1745713020167407687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_21
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1544
+        width: 196
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f117aa293ce6422b0800000000000000
+      internalID: -5610237449538473697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_22
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1590
+        width: 104
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adb1cf5947351c40800000000000000
+      internalID: 5482348909672119718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_23
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1592
+        width: 112
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286a0463fe79411c0800000000000000
+      internalID: -4533831871192062334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_24
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1586
+        width: 132
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda42d58ffca6e9d0800000000000000
+      internalID: -2745316709373949221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_25
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1576
+        width: 230
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0fd7d2156e7d4c0800000000000000
+      internalID: -4262685285952917272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_27
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 1564
+        width: 136
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137887ee2d6b13ea0800000000000000
+      internalID: -5894729420191004879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_28
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 1576
+        width: 230
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a36ced8fa6f374d0800000000000000
+      internalID: -3137893281486314588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_30
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1276
+        width: 300
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488d8d703b0557470800000000000000
+      internalID: 8391702210535807108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_31
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1448
+        width: 97
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de78f05e20228e00800000000000000
+      internalID: 1045433446802423512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_33
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1444
+        width: 102
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd99267ed983fe370800000000000000
+      internalID: 8353958084638579164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_42
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1179
+        width: 555
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d701a2530499b320800000000000000
+      internalID: 2574251404011046868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_46
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1040
+        width: 307
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1e178c254b1fad0800000000000000
+      internalID: -2670154836410768946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_47
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 936
+        width: 200
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f198e44f432860d20800000000000000
+      internalID: 3244423745515718943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_48
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 872
+        width: 152
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad21ba98dd1bf9b0800000000000000
+      internalID: -5045406141393064533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_49
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 784
+        width: 100
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ee272c2d0dcfad0800000000000000
+      internalID: -2667027275686154615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Allq_50
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 616
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e46f242ca512f90800000000000000
+      internalID: -6980198157053964712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
