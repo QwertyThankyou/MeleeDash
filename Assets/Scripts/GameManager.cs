@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -25,6 +27,11 @@ public class GameManager : MonoBehaviour
 	private List<GameObject> portals = new List<GameObject>(); // Лист с GameObject порталами
 	private int currentRoom = 0; // Номер комнаты, в которой находится игрок, по умолчанию спавнимся в первой (нулевой)
 	public int countPortal = 1;  // Количество порталов на сцене
+	public int bossRoom;
+	
+	[Header("Canvas")]
+	public GameObject BossHP;
+	public Text money;
 	
 	public List<int> enemyCountInRoom = new List<int>();  // Лист с колличеством врагов в каждой комнате
 	private int enemyKill = 0;  // Ситает убийства в текущей комнате
@@ -42,7 +49,7 @@ public class GameManager : MonoBehaviour
 	{
 		cam = Camera.main;
 		ball.DesactivateRb ();
-
+		BossHP.SetActive(false);
 		PortalFill();
 	}
 
@@ -60,6 +67,8 @@ public class GameManager : MonoBehaviour
 		if (isDragging) {
 			OnDrag ();
 		}
+
+		money.text = Bank.money.ToString();
 
 		// damage.text = ball.damage.ToString();
 		// health.text = ball.health.ToString();
@@ -81,12 +90,22 @@ public class GameManager : MonoBehaviour
 	public void EnemyKill()  // Вызывается при уничтожении enemy
 	{
 		enemyKill++;
-		if (enemyCountInRoom[currentRoom] == enemyKill)
+		if (currentRoom == bossRoom)
 		{
-			PortalActive();
+			StartCoroutine(LoadMenu());
+		}
+		else if (enemyCountInRoom[currentRoom] == enemyKill)
+		{
 			Bank.isDone = true;
 			enemyKill = 0;
+			PortalActive();
 		}
+	}
+
+	IEnumerator LoadMenu()
+	{
+		yield return new WaitForSeconds(4f);
+		SceneManager.LoadScene("MainMenu");
 	}
 
 	private void PortalFill()  // Заполнение листа с порталами
@@ -106,6 +125,7 @@ public class GameManager : MonoBehaviour
 	{
 		portals[currentRoom].SetActive(true);
 		currentRoom++;
+		if (currentRoom == bossRoom) BossHP.SetActive(true);
 	}
 
 	//-Drag--------------------------------------

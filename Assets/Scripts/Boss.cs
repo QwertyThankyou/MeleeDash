@@ -40,34 +40,22 @@ public class Boss : MonoBehaviour
     void Update()
     {
         if (Vector2.Distance(transform.position, _player.position) < viewRad && _animator.GetCurrentAnimatorStateInfo(0).IsName("Attackboss1")) Angry();
-        // if (health >= health / 2) StageOne();
-        // else StageTwo();
-        
-        //slider.value = health;
+
+        slider.value = health;
     }
 
-    // private void StageOne()
-    // {
-    //     
-    // }
-    //
-    // private void StageTwo()
-    // {
-    //     
-    // }
-    
     void Angry()
     {
         transform.position = Vector2.MoveTowards(transform.position, _player.position, speed * Time.deltaTime);
     }
     
 
-    private void TakeDamage(int x) // Наносит урон
+    private void TakeDamage(int x) // Получает урон
     {
         health -= x;
     }
 
-    private void GiveDamage(int x) // Получает урон
+    private void GiveDamage(int x) // Наносит урон
     {
         _ball.isHurt = true;
         _ball.health -= x;
@@ -84,7 +72,8 @@ public class Boss : MonoBehaviour
             {
                 CinemachineShake.Instance.ShakeCamera(5f, 1f);
                 _gameManager.enemyDestroy.Invoke();
-                Destroy(this.gameObject);
+                slider.gameObject.SetActive(false);
+                Destroy(gameObject);
             }
         }
     }

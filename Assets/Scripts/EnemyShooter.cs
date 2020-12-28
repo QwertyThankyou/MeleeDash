@@ -18,7 +18,7 @@ public class EnemyShooter : MonoBehaviour
     [Header("Rotate")]
     public float speedRotate = 1f; // Скорость поворота
     public int rotationOffset = -90; // Каким боком будет идти в сторону игрока
-    private float _rot;              // Хуй знает что такое
+    private float _rot;              
     
     [Header("Ammo")]
     public GameObject ammo;           // Будет хранить ссылку на боеприпас

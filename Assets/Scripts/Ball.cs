@@ -3,6 +3,7 @@ using System.Collections;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class Ball : MonoBehaviour
 	 [Header("AudioManager")] 
 	 public AudioManager audioManager;
 
+	 [Header("Canvas")]
+	 public Slider healthT;
+
 	 private GameObject _particleMagnit;
 	 private ParticleSystem _particleSystem;
 
@@ -32,6 +36,11 @@ public class Ball : MonoBehaviour
 		_particleMagnit.SetActive(false);
 		
 		//StatsChanger();
+	}
+
+	private void Update()
+	{
+		healthT.value = health;
 	}
 
 	public void PlayerHurt()
