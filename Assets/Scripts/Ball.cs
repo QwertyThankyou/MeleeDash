@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -24,6 +25,9 @@ public class Ball : MonoBehaviour
 	 [Header("Canvas")]
 	 public Slider healthT;
 
+	 [Header("Skins")] 
+	 public List<Sprite> sprites = new List<Sprite>();
+	 
 	 private GameObject _particleMagnit;
 	 private ParticleSystem _particleSystem;
 
@@ -34,7 +38,8 @@ public class Ball : MonoBehaviour
 		_particleMagnit = transform.Find("HurtPlayer").gameObject;
 		_particleSystem = _particleMagnit.GetComponent<ParticleSystem>();
 		_particleMagnit.SetActive(false);
-		
+		GetComponent<SpriteRenderer>().sprite = sprites[Bank.skin];
+
 		//StatsChanger();
 	}
 
