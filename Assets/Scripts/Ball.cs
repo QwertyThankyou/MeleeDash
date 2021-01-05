@@ -38,7 +38,7 @@ public class Ball : MonoBehaviour
 		_particleMagnit = transform.Find("HurtPlayer").gameObject;
 		_particleSystem = _particleMagnit.GetComponent<ParticleSystem>();
 		_particleMagnit.SetActive(false);
-		GetComponent<SpriteRenderer>().sprite = sprites[Bank.skin];
+		GetComponent<SpriteRenderer>().sprite = sprites[Bank.currentSkin];
 
 		//StatsChanger();
 	}

@@ -87,6 +87,11 @@ public class GameManager : MonoBehaviour
 		ball.health = Bank.health;
 	}
 
+	public void MenuButton()
+	{
+		SceneManager.LoadScene("MainMenu");
+	}
+
 	public void EnemyKill()  // Вызывается при уничтожении enemy
 	{
 		enemyKill++;
