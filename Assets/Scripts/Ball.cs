@@ -39,7 +39,9 @@ public class Ball : MonoBehaviour
 		_particleSystem = _particleMagnit.GetComponent<ParticleSystem>();
 		_particleMagnit.SetActive(false);
 		GetComponent<SpriteRenderer>().sprite = sprites[Bank.currentSkin];
-
+		health = Bank.health;
+		damage = Bank.damage;
+		healthT.maxValue = Bank.health;
 		//StatsChanger();
 	}
 
@@ -93,7 +95,7 @@ public class Ball : MonoBehaviour
 			health--;
 			if (health <= 0)
 			{
-				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+				SceneManager.LoadScene("MainMenu");
 			}
 		}
 

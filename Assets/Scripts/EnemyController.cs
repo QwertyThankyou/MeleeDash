@@ -97,7 +97,7 @@ public class EnemyController : MonoBehaviour
             GiveDamage(damage);
             if (_ball.health <= 0)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene("MainMenu");
             }
         }
     }

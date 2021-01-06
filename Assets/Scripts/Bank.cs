@@ -11,9 +11,11 @@ namespace DefaultNamespace
             1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
         };
-        public static int health = 1;
+        public static int health = 10;
+        public static int healthCost = 100;
         public static int damage = 1;
-        public static int money = 199;
+        public static int damageCost = 1000;
+        public static int money = 1002;
         public static int currentSkin = 0;
         public static bool isDone = false;
     }
